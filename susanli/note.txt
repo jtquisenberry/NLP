@@ -1,0 +1,16 @@
+
+https://github.com/huggingface/transformers/issues/2422
+
+It can be done as the documentation suggests.
+Once you've got the pre-trained tokenizer and model loaded the first time via (say for T5):
+
+tokenizer = AutoTokenizer.from_pretrained("t5-small")
+model = TFAutoModelWithLMHead.from_pretrained("t5-small")
+You can then save them locally via:
+
+tokenizer.save_pretrained('./local_model_directory/')
+model.save_pretrained('./local_model_directory/')
+And then simply load from the directory:
+
+tokenizer = AutoTokenizer.from_pretrained('./local_model_directory/')
+model = TFAutoModelWithLMHead.from_pretrained('./local_model_directory/')
