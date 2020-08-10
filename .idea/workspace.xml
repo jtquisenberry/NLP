@@ -80,12 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2005" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
+  <component name="ProjectId" id="1fvg7whvqcMOr01Uxkd5zMvslg0" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -264,6 +259,12 @@
     <MESSAGE value="testing git" />
     <MESSAGE value="Documentation" />
     <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1597103935875">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040/-3840.-138.1280.680@0.0.1920.1040" timestamp="1597103935875" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
