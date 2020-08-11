@@ -136,7 +136,7 @@ len(dataset_train), len(dataset_val)
 
 
 # In[16]:
-model = BertForSequenceClassification.from_pretrained(r'../bert-base-uncased', from_pt=True)
+model = BertForSequenceClassification.from_pretrained(r'../../models/bert-base-uncased', from_pt=True)
 
 model = BertForSequenceClassification.from_pretrained("bert-base-uncased",
                                                       num_labels=len(label_dict),
