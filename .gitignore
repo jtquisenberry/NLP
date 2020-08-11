@@ -7,3 +7,6 @@ bert-base-uncased/bert-base-uncased.bin
 .idea/workspace.xml
 .idea/NLP.iml
 
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/modules.xml
