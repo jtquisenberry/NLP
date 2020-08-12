@@ -13,6 +13,10 @@ from transformers import BertTokenizer
 from torch.utils.data import TensorDataset
 
 from transformers import BertForSequenceClassification
+from datetime import datetime
+
+start_time = datetime.now()
+print(start_time)
 
 # In[2]:
 
@@ -330,4 +334,7 @@ accuracy_per_class(predictions, true_vals)
 print('Done')
 
 
-
+end_time = datetime.now()
+print(end_time)
+total_time = end_time - start_time
+print(total_time)
