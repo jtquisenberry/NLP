@@ -10,3 +10,10 @@ bert-base-uncased/bert-base-uncased.bin
 .idea/vcs.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/modules.xml
+
+/.idea/
+character_level_cnn/.idea/
+.ipynb_checkpoints/ktrain_version-checkpoint.ipynb
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+.ipynb_checkpoints/ktrain_version-checkpoint.ipynb
+.ipynb_checkpoints/Versions-checkpoint.ipynb
