@@ -1,0 +1,10 @@
+resolved_archive_file = cached_path(
+                    archive_file,
+                    cache_dir=cache_dir,
+                    force_download=force_download,
+                    proxies=proxies,
+                    resume_download=resume_download,
+                    local_files_only=local_files_only,
+                )
+				
+C:\Users\my_user\.cache\torch\transformers\ae9df7a8d658c4f3e1917a471a8a21cf678fa1d4cb91e7702dfe0598dbdcf354.c2015533705b9dff680ae707e205a35e2860e8d148b45d35085419d74fe57ac5
