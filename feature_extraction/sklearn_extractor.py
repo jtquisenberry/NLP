@@ -128,7 +128,7 @@ class SklearnExtractor:
 
         raise NotImplementedError('Remove this line to save the pickle.')
 
-        filehandler = open(r'E:\Corpora\PII_Jeb_20190507\sklearn_features_003.pkl', 'wb')
+        filehandler = open(r'E:\Corpora\PII_Directory_20190507\sklearn_features_003.pkl', 'wb')
         pickle.dump(sklearn_features_dict, filehandler)
         filehandler.close()
 

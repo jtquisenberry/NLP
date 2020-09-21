@@ -19,8 +19,8 @@ def get_text_from_row(row):
 
 if __name__ == '__main__':
 
-    in_directory = r"E:\Corpora\PII_Jeb_20190507"
-    out_directory = r"E:\Corpora\PII_Jeb_20190507\export_lines"
+    in_directory = r"E:\Corpora\PII_Directory_20190507"
+    out_directory = r"E:\Corpora\PII_Directory_20190507\export_lines"
 
     label_dictionary = {'PII|Health|condition_treatment':0,
                         'PII|Health|health_payment': 1,
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Guid / path dictionary.
     fh.make_file_dictionary()
 
-    csv_file = r"E:\Corpora\PII_Jeb_20190507\Paragraph_Reports\health_payment\combined.csv"
+    csv_file = r"E:\Corpora\PII_Directory_20190507\Paragraph_Reports\health_payment\combined.csv"
     df = pd.read_csv(csv_file,usecols=['guid','paragraph_position','paragraph_length','tag'])
     df.drop_duplicates(inplace=True)
     df = df.loc[df['tag'].isin(['PII|Health|condition_treatment','PII|Health|health_payment','PII|Health|applications_and_claims', 'PII|Employment|performance_review'])]

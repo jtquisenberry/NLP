@@ -9,9 +9,9 @@ from sklearn.manifold import TSNE
 import pickle
 
 from keras.models import load_model
-model = load_model(r'E:\Corpora\PII_Jeb_20190507\keras_model_001.mdl')
+model = load_model(r'E:\Corpora\PII_Directory_20190507\keras_model_001.mdl')
 
-filehandler = open(r"E:\Corpora\PII_Jeb_20190507\keras_vectors_001.pkl", 'rb')
+filehandler = open(r"E:\Corpora\PII_Directory_20190507\keras_vectors_001.pkl", 'rb')
 tfidf_trained_vectorizer = pickle.load(filehandler)
 filehandler.close()
 

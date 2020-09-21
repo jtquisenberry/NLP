@@ -3,7 +3,7 @@ import pandas as pd
 
 
 if __name__ == '__main__':
-    csv_file = r"E:\Corpora\PII_Jeb_20190507\Paragraph_Reports\health_payment\combined.csv"
+    csv_file = r"E:\Corpora\PII_Directory_20190507\Paragraph_Reports\health_payment\combined.csv"
     df = pd.read_csv(csv_file)
     df.drop_duplicates(inplace=True)
 

@@ -412,7 +412,7 @@ class SklearnWrapperExtractor:
 
         a = 1
 
-        #pickle.dump(xxx_df, open(r'E:\Corpora\PII_Jeb_20190507\features_20190528-001.pkl', 'wb'))
+        #pickle.dump(xxx_df, open(r'E:\Corpora\PII_Directory_20190507\features_20190528-001.pkl', 'wb'))
 
         b = 1
 

@@ -91,7 +91,7 @@ x_train_2 = vectorizer.fit_transform(x_train_preprocessed).todense()
 x_test_2 = vectorizer.transform(x_test_preprocessed).todense()
 
 
-filehandler = open(r'E:\Corpora\PII_Jeb_20190507\keras_vectors_001.pkl', 'wb')
+filehandler = open(r'E:\Corpora\PII_Directory_20190507\keras_vectors_001.pkl', 'wb')
 pickle.dump(vectorizer, filehandler)
 filehandler.close()
 
@@ -137,7 +137,7 @@ print(model.summary())
 
 # Model Training
 model.fit(x_train_2, Y_train, batch_size=batch_size, epochs=nb_epochs, verbose=1)
-model.save(r'E:\Corpora\PII_Jeb_20190507\keras_model_001.mdl')
+model.save(r'E:\Corpora\PII_Directory_20190507\keras_model_001.mdl')
 
 # Model Prediction
 y_train_predclass = model.predict_classes(x_train_2, batch_size=batch_size)
