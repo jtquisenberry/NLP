@@ -13,7 +13,10 @@ https://github.com/curiousily/Getting-Things-Done-with-Pytorch
 https://github.com/jtquisenberry/Getting-Things-Done-with-Pytorch
 
 
-
+# Fine-tuning BERT
+Fine-Tuning-BERT-master
+https://github.com/prateekjoshi565/Fine-Tuning-BERT/blob/master/Fine_Tuning_BERT_for_Spam_Classification.ipynb
+https://github.com/jtquisenberry/Fine-Tuning-BERT
 
 
 
