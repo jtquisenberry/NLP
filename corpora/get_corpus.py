@@ -39,7 +39,7 @@ corpus_dict['sttng6'] = \
     Corpus(name='Star Trek: The Next Generation',
            url=r'https://github.com/jtquisenberry/NLP/raw/master/corpora/sttng6.zip',
            description="All scripts of Star Trek: The Next Generation, preprocessed by ' + '\n' +"
-           "(1) concatenating scripts, (2) conversion on lowercase.",
+           "(1) concatenating scripts, (2) stop word removal, (3) conversion to lowercase.",
            subdirectory='sttng6',
            first_file='sttng6.txt')
 corpus_dict['spampot_hpsl_concat'] = \
