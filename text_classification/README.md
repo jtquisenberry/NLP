@@ -25,3 +25,6 @@ https://github.com/jtquisenberry/cnn-text-classification
 
 # Multi-class classification with word embeddings
 https://github.com/TomLin/Playground/blob/master/04-Model-Comparison-Word2vec-Doc2vec-TfIdfWeighted.ipynb
+
+# `100_Playground-master`
+https://github.com/TomLin/Playground
