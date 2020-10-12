@@ -1,7 +1,22 @@
 # https://huggingface.co/transformers/usage.html
 
+
+import os
+
+# Ignoring visible gpu device (device: 0, name: GeForce GTX 660 Ti, pci bus id: 0000:05:00.0,
+# compute capability: 3.0) with Cuda compute capability 3.0. The minimum required Cuda capability is 3.5.
+# Force use of CPU even if a GPU is available.
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
 from transformers import TFAutoModelForTokenClassification, AutoTokenizer
 import tensorflow as tf
+
+if tf.test.gpu_device_name():
+    print('GPU found')
+else:
+    print("No GPU found")
+print()
+
 
 model = TFAutoModelForTokenClassification.from_pretrained("dbmdz/bert-large-cased-finetuned-conll03-english")
 tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
