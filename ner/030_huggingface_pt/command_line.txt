@@ -1,0 +1,7 @@
+--data_dir ../datasets/conll2003/en --labels ./labels.txt --model_name_or_path bert-base-multilingual-cased --output_dir germeval-model --max_seq_length 128 --num_train_epochs 3 --per_device_train_batch_size 32 --save_steps 750 --seed 1 --do_train --do_eval --do_predict
+
+--data_dir ../datasets/conll2003/en --labels ./labels.txt --model_name_or_path bert-base-multilingual-cased --output_dir germeval-model --max_seq_length 128 --num_train_epochs 3 --per_device_train_batch_size 32 --save_steps 750 --seed 1 --do_train --do_eval --do_predict
+
+--data_dir=data --bert_model=E:\Development\corpora\cased_L-24_H-1024_A-16 --output_dir=out_base --max_seq_length=128 --do_train --num_train_epochs 3 --do_eval --eval_on dev
+
+--data_dir ../datasets/conll2003/en --labels ./labels.txt --model_name_or_path bert-base-multilingual-cased --output_dir germeval-model --max_seq_length 128 --num_train_epochs 3 --per_device_train_batch_size 32 --save_steps 750 --seed 1 --do_train --do_eval --do_predict
