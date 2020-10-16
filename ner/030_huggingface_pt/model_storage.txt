@@ -1,0 +1,1 @@
+10/14/2020 15:17:40 - INFO - transformers.file_utils -   https://cdn.huggingface.co/bert-base-multilingual-cased-tf_model.h5 not found in cache or force_download set to True, downloading to C:\Users\jquisenberry\.cache\torch\transformers\tmp408hl2tt
