@@ -300,6 +300,9 @@ def main():
                         action='store_true',
                         help="Set this flag to enable multi-gpu training using MirroredStrategy."
                              "Single gpu training")
+    # JQ
+    parser.add_argument("--device_type", default='CPU', type=str,
+                        help="Specify whether this application will be run on a CPU or GPUs")
     parser.add_argument("--gpus",default='0',type=str,
                         help="Comma separated list of gpus devices."
                               "For Single gpu pass the gpu id.Default '0' GPU"
@@ -325,6 +328,11 @@ def main():
         else:
             gpus = [f"/gpu:{gpu}" for gpu in args.gpus.split(',')]
             strategy = tf.distribute.MirroredStrategy(devices=gpus)
+    # JQ
+    elif args.device_type.upper() == 'CPU':
+        print(tf.config.list_physical_devices('CPU'))
+        cpus = ['/cpu:0']
+        strategy = tf.distribute.MirroredStrategy(devices=cpus)
     else:
         gpu = args.gpus.split(',')[0]
         strategy = tf.distribute.OneDeviceStrategy(device=f"/gpu:{gpu}")
