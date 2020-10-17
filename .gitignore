@@ -34,3 +34,9 @@ text_classification/.idea/inspectionProfiles/profiles_settings.xml
 text_classification/.idea/misc.xml
 text_classification/.idea/modules.xml
 text_classification/.idea/workspace.xml
+ner/.idea/encodings.xml
+ner/.idea/inspectionProfiles/profiles_settings.xml
+ner/.idea/misc.xml
+ner/.idea/modules.xml
+ner/.idea/vcs.xml
+*.pyc
