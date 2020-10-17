@@ -40,3 +40,10 @@ ner/.idea/misc.xml
 ner/.idea/modules.xml
 ner/.idea/vcs.xml
 *.pyc
+*.pyc
+ner/040_conll_2003_bert_tf/utils/__pycache__/__init__.cpython-37.pyc
+ner/040_conll_2003_bert_tf/utils/__pycache__/tf_utils.cpython-37.pyc
+ner/030_huggingface_pt/runs/Oct15_17-44-26_jqhome03/events.out.tfevents.1602809087.JQHOME03.30224.4945.v2
+ner/040_conll_2003_bert_tf/utils/__pycache__/__init__.cpython-37.pyc
+ner/040_conll_2003_bert_tf/utils/__pycache__/tf_utils.cpython-37.pyc
+text_classification/.idea/vcs.xml
