@@ -1,0 +1,92 @@
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+  <title>BRAT with Flask</title>
+  <link rel='icon' href="{{ url_for('static', filename='stanza-logo.png') }}" type='image/png' />
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- Chosen Dropdown Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+  <!-- Brat -->
+  <link rel="stylesheet" type="text/css" href="https://nlp.stanford.edu/js/brat/style-vis.css"/>
+  <script type="text/javascript" src="https://nlp.stanford.edu/js/brat/client/lib/head.load.min.js"></script>
+  <!-- d3 -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.4.17/dagre-d3.min.js"></script>
+
+    <!-- CoreNLP -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stanza-brat.css') }}"/>
+  <script type="text/javascript" src="{{ url_for('static', filename='stanza-brat.js') }}"></script>
+
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<div id="wrap">
+<!-- A header bar -->
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+        BRAT with Flask</a>
+    </div>
+  </div>
+</nav>
+
+<!-- The main content of the page -->
+<div class="container">
+  <div class="row">
+
+    <!-- Text area input -->
+    <form id="form_annotate" accept-charset="UTF-8" onsubmit="return false;">
+    <div class="col-sm-12" style="margin-bottom: 5px;">
+      <label for="text" class="label">&mdash; Text to annotate &mdash;</label>
+      <textarea class="form-control" rows="2" id="text" placeholder="Washington is a state in the U.S." autofocus maxlength="10000"></textarea>
+    </div>
+
+
+
+
+
+    <!-- Submit button -->
+    <div class="col-sm-2" style="text-align: center; margin-top: 7px; ">
+        <button id="submit" class="btn btn-block btn-default">Submit</button>
+    </div>
+    </form>
+
+  </div>
+  <div class="row">
+    <!-- A panel for errors to show up in -->
+    <div id="errors" class="row">
+    </div>
+
+    <!-- Loading gif -->
+    <div id="loading" class="row" style="display:none">
+      <img src="https://nlp.stanford.edu/img/loading.gif" height="200px" style="margin-left: 200px"/>
+    </div>
+
+    <!-- Annotation population area -->
+    <div id="annotations" class="row" style="display:none">
+    </div>
+  </div>
+
+  <div id="embedding-entity-example"></div>
+
+
+</div>
+</div>
+
+<!-- The footer of the page -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <p class="text-muted">
+      Visualisation provided using the <a href="http://brat.nlplab.org/">brat visualisation/annotation software</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
