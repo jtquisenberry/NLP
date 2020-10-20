@@ -34,6 +34,9 @@ def notes_list():
     else:
         out_list = [note_repr(idx) for idx in sorted(notes.keys())]
         out_json = json.dumps(out_list)
+        '''
+        {"sentences": [{"basicDependencies": [{"dep": "nsubj", "governor": 4, "governorGloss": "state", "dependent": 1, "dependentGloss": "Washington"}, {"dep": "cop", "governor": 4, "governorGloss": "state", "dependent": 2, "dependentGloss": "is"}, {"dep": "det", "governor": 4, "governorGloss": "state", "dependent": 3, "dependentGloss": "a"}, {"dep": "root", "governor": 0, "governorGloss": "U.S.", "dependent": 4, "dependentGloss": "state"}, {"dep": "case", "governor": 7, "governorGloss": "U.S.", "dependent": 5, "dependentGloss": "in"}, {"dep": "det", "governor": 7, "governorGloss": "U.S.", "dependent": 6, "dependentGloss": "the"}, {"dep": "nmod", "governor": 4, "governorGloss": "state", "dependent": 7, "dependentGloss": "U.S."}], "tokens": [{"index": 1, "word": "Washington", "lemma": "Washington", "pos": "NNP", "upos": "PROPN", "feats": "Number=Sing", "ner": "GPE"}, {"index": 2, "word": "is", "lemma": "be", "pos": "VBZ", "upos": "AUX", "feats": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin", "ner": "O"}, {"index": 3, "word": "a", "lemma": "a", "pos": "DT", "upos": "DET", "feats": "Definite=Ind|PronType=Art", "ner": "O"}, {"index": 4, "word": "state", "lemma": "state", "pos": "NN", "upos": "NOUN", "feats": "Number=Sing", "ner": "O"}, {"index": 5, "word": "in", "lemma": "in", "pos": "IN", "upos": "ADP", "feats": null, "ner": "O"}, {"index": 6, "word": "the", "lemma": "the", "pos": "DT", "upos": "DET", "feats": "Definite=Def|PronType=Art", "ner": "O"}, {"index": 7, "word": "U.S.", "lemma": "U.S.", "pos": "NNP", "upos": "PROPN", "feats": "Number=Sing", "ner": "GPE"}]}]}
+        '''
         return out_json
 
 '''
