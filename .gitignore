@@ -34,3 +34,7 @@ text_classification/.idea/inspectionProfiles/profiles_settings.xml
 text_classification/.idea/misc.xml
 text_classification/.idea/modules.xml
 text_classification/.idea/workspace.xml
+ner/030_huggingface_pt/__pycache__/tasks.cpython-37.pyc
+ner/030_huggingface_pt/__pycache__/utils_ner.cpython-37.pyc
+ner/030_huggingface_pt/runs/Oct16_15-25-52_MTP-HZ-P-DVT005/1602887242.5490594/events.out.tfevents.1602887242.MTP-HZ-P-DVT005.10008.1
+ner/030_huggingface_pt/runs/Oct16_15-25-52_MTP-HZ-P-DVT005/events.out.tfevents.1602887242.MTP-HZ-P-DVT005.10008.0
