@@ -4,6 +4,7 @@
 var serverAddress = '/';//'http://stanza.stanford.edu';
 
 // Load Brat libraries
+/*
 var bratLocation = 'http://nlp.stanford.edu/js/brat/';
 head.js(
   // External libraries
@@ -24,6 +25,7 @@ head.js(
   // parse viewer
   './stanza-parseviewer.js'
 );
+*/
 
 // Uses Dagre (https://github.com/cpettitt/dagre) for constinuency parse
 // visualization. It works better than the brat visualization.
@@ -1018,7 +1020,7 @@ $(document).ready(function() {
     currentQuery = $('#text').val();
     if (currentQuery.trim() == '') {
 
-        currentQuery = 'YYYYYYYY';
+        currentQuery = 'Washington is a state in the U.S.'
 
       $('#text').val(currentQuery);
     }
@@ -1028,7 +1030,7 @@ $(document).ready(function() {
     $('#patterns_row').hide();
     $('#loading').show();
 
-    currentQuery = 'Washington is a state in the U.S.'
+
 
     // Run query
     $.ajax({
@@ -1048,6 +1050,7 @@ $(document).ready(function() {
 
           // Empty divs
           $('#annotations').empty();
+          $('#annotations').append('<h4 class="red">' + 'NER' + ':</h4> <div id="' + 'NER' + '"></div>');
 
           console.log(data)
 
@@ -1055,7 +1058,7 @@ $(document).ready(function() {
           docData = data['docData']
 
 
-          Util.embed('embedding-entity-example', $.extend({}, collData),
+          Util.embed('NER', $.extend({}, collData),
                 $.extend({}, docData), webFontURLs);
 
 
@@ -1065,22 +1068,7 @@ $(document).ready(function() {
 
 
 
-          // Re-render divs
-          function createAnnotationDiv(id, annotator, selector, label) {
-            // (make sure we requested that element)
-            if (annotators().indexOf(annotator) < 0) {
-              return;
-            }
-            // (make sure the data contains that element)
-            ok = false;
 
-            // (render the element)
-            if (ok) {
-              $('#annotations').append('<h4 class="red">' + 'NER' + ':</h4> <div id="' + 'NER' + '"></div>');
-            }
-          }
-          // (create the divs)
-          createAnnotationDiv('ner',      'ner',        'ner',                                 'Named Entity Recognition');
           // Update UI
           $('#loading').hide();
           $('.corenlp_error').remove();  // Clear error messages

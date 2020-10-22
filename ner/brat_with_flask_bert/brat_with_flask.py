@@ -25,12 +25,13 @@ def get_annotation():
 
         text = r"Produced wimzipFQm«tiy24)U)^ 33330FiteenlAe Road, Smith. Mict^ 480^; USA; ,TX; DRIVER LICENSE; 9 Class C; 4b Exp; 17777777; I4. iss 01/01/2011; 01/01/1975; Ud DL; - •,; ^'^3 DOB"
 
-        entity_types = [{
+        collData = {'entity_types':  [{
             'type': 'Location',
-            'labels': ['LOC'],
+            'labels': ['Location', 'LOC'],
             'bgColor': '#7fa2ff',
             'borderColor': 'darken'
         }]
+        }
 
         docData = {
             "text": text,
@@ -42,7 +43,7 @@ def get_annotation():
 
         payload = {
             "docData": docData,
-            "collData": entity_types
+            "collData": collData
         }
 
 
