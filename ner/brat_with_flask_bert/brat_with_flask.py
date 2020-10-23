@@ -15,7 +15,8 @@ else:
     print("No GPU found")
 print()
 
-
+model = TFAutoModelForTokenClassification.from_pretrained("dbmdz/bert-large-cased-finetuned-conll03-english")
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
 
 
 app = Flask(__name__)
@@ -113,8 +114,7 @@ class NERBert():
 
     def run(self):
 
-        model = TFAutoModelForTokenClassification.from_pretrained("dbmdz/bert-large-cased-finetuned-conll03-english")
-        tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+
 
         label_list = [
             "O",  # Outside of a named entity
@@ -204,6 +204,9 @@ class NERBert():
         return entities
 
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = 80
+    url = '0.0.0.0'
+    app.run(host=url, port=port, debug=True)
+    # app.run(debug=True)
+    # app.run(debug=True, use_reloader=False)
