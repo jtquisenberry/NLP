@@ -1,7 +1,7 @@
 # from ner_flaskr import app
 from flask import Flask, render_template, request, redirect, current_app, g, send_from_directory
 import json
-from models.nerbert import NERBert
+from ..models.nerbert import NERBert
 
 breakpoint001 = 0
 

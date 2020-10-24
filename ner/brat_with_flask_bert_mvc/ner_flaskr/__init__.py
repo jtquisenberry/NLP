@@ -32,7 +32,7 @@ with app.app_context():
     app.config['model'] = model
     app.config['tokenizer'] = tokenizer
 
-    from controllers import ner
+    from .controllers import ner
     ner.check_loaded()
 
 q = 1
