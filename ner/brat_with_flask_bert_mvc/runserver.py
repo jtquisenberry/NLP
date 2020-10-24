@@ -1,10 +1,10 @@
 import os
-import project
-#from project import app
+import ner_flaskr
+#from ner_flaskr import app
 
 if __name__ == '__main__':
     port = 5000
     url = '127.0.0.1'
-    project.app.run(host=url, port=port)
+    ner_flaskr.app.run(host=url, port=port)
 
-    # from project.app import *
+    # from ner_flaskr.app import *

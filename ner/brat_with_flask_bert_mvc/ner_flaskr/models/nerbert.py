@@ -1,4 +1,4 @@
-from project import app
+from ner_flaskr import app
 
 class NERBert():
     def __init__(self, text):

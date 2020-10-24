@@ -89,11 +89,11 @@ env/
 venv/
 ENV/
 
-# Spyder project settings
+# Spyder ner_flaskr settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope ner_flaskr settings
 .ropeproject
 
 # mkdocs documentation
@@ -194,11 +194,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Spyder ner_flaskr settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope ner_flaskr settings
 .ropeproject
 
 # mkdocs documentation
