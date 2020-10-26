@@ -6,8 +6,6 @@ class NERBert():
 
     def run(self):
 
-
-
         label_list = [
             "O",  # Outside of a named entity
             "B-MISC",  # Beginning of a miscellaneous entity right after another miscellaneous entity
@@ -44,13 +42,22 @@ class NERBert():
 
             for token in tokens:
                 if not token in ['[CLS]', '[SEP]']:
-                    massaged_token = token.replace('\\', '\\\\').replace('.', r'\.').replace('##', '')
+                    # JQ
+                    # Regex substitutions
+                    massaged_token = token.replace('\\', '\\\\').replace('.', r'\.').replace('##', '')\
+                        .replace(r'?', r'\?').replace(r'(', r'\(').replace(r')', r'\)').replace('*', r'\*')\
+                        .replace('[', r'\[').replace(']', r'\]').replace('+', r'\+').replace('{', r'\{')\
+                        .replace(r'}', r'\}').replace(r',', r'\,').replace(r'-', r'\-')
+
                     my_regex += '(' + massaged_token + ')' + r'\s*'
 
             expressions = re.search(my_regex, sequence)
 
             tokens2 = tokens[1:-1]
             predictions2 = predictions.numpy().tolist()[0][1:-1]
+
+            aaaaa = 1
+
 
             for i in range(0, len(tokens2)):
                 token = tokens2[i]
