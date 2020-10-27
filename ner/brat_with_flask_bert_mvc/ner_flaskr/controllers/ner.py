@@ -31,7 +31,7 @@ def get_annotation():
         text = text_to_annotate
 
         nb = NERBert(text_to_annotate)
-        entities = nb.run()
+        entities = nb.run(sequence=text)
 
         collData = {'entity_types':  [{
             'type': 'Location',
