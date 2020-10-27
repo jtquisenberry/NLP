@@ -89,6 +89,8 @@ class NERBert():
 
     def combine_pound_entities(self, entities, tokens, sequence):
 
+        type_map = {'Other': 0, 'Miscellaneous': 1, 'Organization': 2, 'Person': 3, 'Location': 4}
+
         previous_token = ''
         previous_type = 'Other'
         previous_end = -1
@@ -99,18 +101,26 @@ class NERBert():
 
             # Adjacent tokens
             current_start = entity[2][0][0]
+            current_type = entity[1]
             if current_start == previous_end:
                 # Either the previous or the current has ##
                 if (len(previous_token) >= 3 and previous_token[-2:] == '##') or (
                         len(token) >= 3 and token[:2] == '##'):
                     # Merge
                     combined_entities[-1][2][0][1] = entity[2][0][1]
+                    # Get best type
+                    if type_map[previous_type] >= type_map[current_type]:
+                        combined_entities[-1][1] = previous_type
+                    else:
+                        combined_entities[-1][1] = current_type
+
                 else:
                     combined_entities.append(entity)
             else:
                 combined_entities.append(entity)
 
             previous_end = entity[2][0][1]
+            previous_type = entity[1]
 
         for x in combined_entities:
             print(x, sequence[x[2][0][0]:x[2][0][1]])
