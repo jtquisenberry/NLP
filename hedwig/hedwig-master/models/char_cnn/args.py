@@ -1,3 +1,5 @@
+print('args')
+
 import os
 
 import models.args
@@ -21,4 +23,5 @@ def get_args():
     parser.add_argument('--trained-model', type=str)
 
     args = parser.parse_args()
+    print('args2')
     return args

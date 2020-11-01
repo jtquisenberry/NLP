@@ -1,3 +1,5 @@
+print('main')
+
 import logging
 import os
 import random
@@ -59,6 +61,7 @@ def evaluate_dataset(split_name, dataset_cls, model, embedding, loader, batch_si
 
 if __name__ == '__main__':
     # Set default configuration in args.py
+    print('zzzzz')
     args = get_args()
     logger = get_logger()
 
@@ -169,3 +172,7 @@ if __name__ == '__main__':
     evaluate_dataset('test', dataset_map[args.dataset], model, None, test_iter, args.batch_size,
                      is_multilabel=dataset_class.IS_MULTILABEL,
                      device=args.gpu)
+else:
+    print(__name__)
+    print('Hello from __main__.py')
+    args = get_args()
