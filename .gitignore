@@ -38,3 +38,13 @@ ner/030_huggingface_pt/__pycache__/tasks.cpython-37.pyc
 ner/030_huggingface_pt/__pycache__/utils_ner.cpython-37.pyc
 ner/030_huggingface_pt/runs/Oct16_15-25-52_MTP-HZ-P-DVT005/1602887242.5490594/events.out.tfevents.1602887242.MTP-HZ-P-DVT005.10008.1
 ner/030_huggingface_pt/runs/Oct16_15-25-52_MTP-HZ-P-DVT005/events.out.tfevents.1602887242.MTP-HZ-P-DVT005.10008.0
+ner/.idea/encodings.xml
+ner/.idea/inspectionProfiles/profiles_settings.xml
+ner/.idea/misc.xml
+ner/.idea/modules.xml
+ner/.idea/vcs.xml
+ner/030_huggingface_pt/__pycache__/format_corpus.cpython-37.pyc
+ner/030_huggingface_pt/__pycache__/preprocess_jq.cpython-37.pyc
+ner/030_huggingface_pt/runs/Oct15_17-44-26_jqhome03/events.out.tfevents.1602809087.JQHOME03.30224.4945.v2
+*.pyc
+text_classification/.idea/vcs.xml
