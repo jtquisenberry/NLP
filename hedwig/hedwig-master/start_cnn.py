@@ -4,7 +4,9 @@
 import models.char_cnn
 
 import sys
-sys.argv.append('abcdef')
+# sys.argv.append('abcdef')
+sys.argv.extend(['--dataset', 'Reuters', '--batch-size', '128', '--lr', '0.001', '--seed', '3435'])
+#sys.argv.append('3')
 
 
 from models.char_cnn import __main__

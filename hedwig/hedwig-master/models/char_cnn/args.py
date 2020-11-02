@@ -1,4 +1,4 @@
-print('args')
+print(r'Top of char_cnn\args.py')
 
 import os
 
@@ -23,5 +23,4 @@ def get_args():
     parser.add_argument('--trained-model', type=str)
 
     args = parser.parse_args()
-    print('args2')
     return args
